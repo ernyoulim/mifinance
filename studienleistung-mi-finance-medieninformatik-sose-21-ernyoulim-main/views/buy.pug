@@ -1,0 +1,16 @@
+extends layoutlogin
+
+block content
+    .container
+         .d-flex.justify-content-center
+            h1
+
+            form(action="/buy" method="post")
+                div(class="form-group")
+                    label(for="Tickersymbol") Tickersymbol
+                    input(type="text", class="form-control", id="inputSymbol", placeholder="Symbol", name="symbol")
+                div(class="form-group")
+                    label(for="inputNumber") Anzahl Aktie
+                    input(type="text",class="form-control", id="inputNumber" placeholder="Anzahl Aktie", name="shares")
+                div(class="form-group")
+                    button(type="submit", class="btn btn-primary") Kaufen

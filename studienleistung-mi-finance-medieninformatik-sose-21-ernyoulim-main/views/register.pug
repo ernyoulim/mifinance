@@ -1,0 +1,22 @@
+extends layout.pug
+
+
+block content
+    .container
+        .d-flex.justify-content-center 
+
+            form(action="/register" method="post")
+                    h1 Registieren
+                    div(class="form-group")
+                        label(for="inputUsername") Nutzername
+                        input(type="text", class="form-control", id="inputUsername", placeholder="Nutzername", name="username")
+                    div(class="form-group")
+                        label(for="inputPassword") Password
+                        input(type="password", class="form-control", id="inputPassword" placeholder="Passwort", name="password")
+                        label(for="comfirmationPassword")
+                        input(type="password", class="form-control", id="Confirmation Password" placeholder="Confirmation Password", name="confirmation")
+                    div(class="form-group")
+                        button(type="submit", class="btn btn-primary") Register
+
+                    if register_error
+                        div(class="alert alert-danger" role="alert") #{register_error}

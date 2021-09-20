@@ -1,0 +1,19 @@
+extends layoutlogin
+
+block content
+    .container
+         .d-flex.justify-content-center
+            h1
+
+            form(action="/sell" method="post")
+                label(for='Tickersymbol') Tickersymbol:
+                    
+                div(class="selectmenu") 
+                    select.form-select(aria-label='Default select example' name = 'symbol' style="width: 40rem;")
+                          each symbol in symbols
+                            option(name='symbol') #{symbol.symbol}
+                div(class="form-group")
+                    label(for="inputNumber") Anzahl Aktie
+                    input(type="number", class="form-control", id="inputNumber" placeholder="Anzahl Aktie", name="shares")
+                div(class="form-group")
+                    button(type="submit", class="btn btn-primary") Verkaufen

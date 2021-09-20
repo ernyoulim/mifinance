@@ -1,0 +1,30 @@
+extends layout.pug
+
+
+block content
+    .container
+        .card.text-black.bg-secondary.bg-gradient.my-auto(style='max-width: 100rem; height: 20rem; ')
+            .card-body(style='padding-top: 80px !important;')
+                    h1 Willkommen bei 
+                    h2 
+                        span.text-primary M 
+                        span.text-warning I 
+                        span.text-danger Finance
+                    p.card-text 
+                        | Verwalte Dein Aktienpot mit MI Finance
+
+                                        
+                    
+            
+        form(action="/login" method="post")
+            div(class="form-group")
+                label(for="inputUsername") Nutzername
+                input(type="text", class="form-control", id="inputUsername", placeholder="Nutzername", name="username", style='max-width: 30rem;')
+            div(class="form-group")
+                label(for="inputPassword") Password
+                input(type="password", class="form-control", id="inputPassword" placeholder="Passwort", name="password" ,style='max-width: 30rem;')
+            div(class="form-group")
+                button(type="submit", class="btn btn-primary") Login
+
+        if login_error
+            div(class="alert alert-danger" role="alert") #{login_error}

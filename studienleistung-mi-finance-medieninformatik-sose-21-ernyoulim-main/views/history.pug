@@ -1,0 +1,26 @@
+extends layoutlogin
+
+block content
+  .container
+
+    table.table.table-striped
+      thead
+        tr
+          th(scope='col') Tickersymbol
+          th(scope='col') Name
+          th(scope='col') Anzahl Aktieh
+          th(scope='col') Preis
+          th(scope='col') Datum
+      thead
+      tbody
+        tr
+          each share in shares
+            tr
+              td #{share.symbol}
+              td #{share.name}
+              td #{share.count}
+              td #{share.price}
+              td #{share.datum}
+            
+          else
+            tdKeine Einträge vorhanden

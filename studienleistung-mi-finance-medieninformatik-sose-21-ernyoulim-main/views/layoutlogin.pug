@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    block title
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css")
+
+body
+.container
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    .container-fluid
+      a.navbar-brand(href='/')
+        span.text-primary M 
+        span.text-warning I 
+        span.text-danger Finance
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNavAltMarkup.collapse.navbar-collapse
+        .navbar-nav
+          a.nav-link.active(aria-current='page' href='/quote') Kurs Abfrage
+          a.nav-link.active(aria-current='page' href='/buy') Kaufen
+          a.nav-link.active(aria-current='page' href='/sell') Verkaufen
+          a.nav-link.active(aria-current='page' href='/history') History
+          a.nav-link.active(aria-current='page' href='/logout') Logout
+
+block content

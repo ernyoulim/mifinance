@@ -1,0 +1,11 @@
+extends layoutlogin.pug
+
+block content
+    .container
+        .d-flex.justify-content-center
+            form(action="/quote" method="post")
+                    div(class="form-group")
+                        label(for="Tickersymbol") Tickersymbol
+                        input(type="text", class="form-control", id="inputSymbol", placeholder="Symbol", name="symbol" style='max-width: 30rem; ')
+                    div(class="form-group")
+                        button(type="submit", class="btn btn-primary") Kurs Abfrage
